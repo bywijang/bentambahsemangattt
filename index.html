@@ -1,276 +1,227 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="id">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>AW ME(H)NIKAH</title>
+
+  <meta name="title" content="Special Journey for Luthfia Azzahra 💍">
+  <meta name="description" content="A little surprise from your future, Wijang Asa.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Special Journey for Luthfia Azzahra 💍">
+  <meta property="og:description" content="A little surprise from your future, Wijang Asa.">
+  <meta property="og:image" content="cover.jpg">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Alice&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    :root { --primary: #9B6B43; --accent: #b69ca3; --bg: #F4F1EA; }
+    body { font-family: 'Quicksand', sans-serif; background-color: #1a1a1a; color: #4A4238; overflow-x: hidden; scroll-behavior: smooth; }
+    .font-title { font-family: 'Marcellus', serif; }
+    .font-serif { font-family: 'Alice', serif; }
+
+    .mobile-frame {
+      max-width: 450px; margin: 0 auto; position: relative; min-height: 100vh;
+      background-image: url('bg.jpg'); background-size: cover; background-position: center;
+      background-attachment: fixed; background-color: var(--bg);
+    }
+
+    /* Efek Blur & Gelap di Background */
+    .mobile-frame::before {
+      content: ""; position: absolute; inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px);
+      z-index: 1;
+    }
+
+    .mobile-frame > * { position: relative; z-index: 2; }
+
+    #cover {
+      position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('cover.jpg');
+      background-size: cover; background-position: center;
+      transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+
+    .music-piringan {
+      position: fixed; bottom: 25px; right: 20px; z-index: 999;
+      width: 55px; height: 55px; border-radius: 50%; border: 2px solid white;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2); overflow: hidden; background: white;
+    }
+
+    .rotating { animation: rotate 6s linear infinite; }
+    @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+    .glass-box { background: rgba(255, 255, 255, 0.55); backdrop-filter: blur(10px); border-radius: 25px; border: 1px solid rgba(255,255,255,0.4); }
+
+    .paper-note {
+      background: #fff; padding: 25px; border-radius: 5px; position: relative;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.05); border-left: 5px solid var(--primary);
+    }
+    .paper-note::before { content: "📌"; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); font-size: 20px; }
+
+    .btn-mood { background: white; padding: 12px; border-radius: 12px; font-size: 11px; font-weight: 600; box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: 0.3s; }
+    .btn-mood:active { transform: scale(0.9); background: var(--accent); color: white; }
+
+    .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
   </style>
 </head>
-<body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="id"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;AW ME(H)NIKAH&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Marcellus&amp;family=Alice&amp;family=Quicksand:wght@300;400;600&amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>:root { --primary: #9B6B43; --accent: #b69ca3; --bg: #F4F1EA; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body { font-family: 'Quicksand', sans-serif; background-color: #1a1a1a; color: #4A4238; overflow: hidden; scroll-behavior: smooth; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.font-title { font-family: 'Marcellus', serif; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.font-serif { font-family: 'Alice', serif; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Background Utama */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.mobile-frame {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 450px; margin: 0 auto; position: relative; min-height: 100vh;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-image: url('bg.jpg'); background-size: cover; background-position: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-attachment: fixed; background-color: var(--bg);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Halaman Utama (Cover) */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>#cover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('cover.jpg');</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-size: cover; background-position: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Piringan Musik Pojok Kanan Bawah */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.music-piringan {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: fixed; bottom: 25px; right: 20px; z-index: 999;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 55px; height: 55px; border-radius: 50%; border: 2px solid white;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 4px 15px rgba(0,0,0,0.2); overflow: hidden; background: white;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.rotating { animation: rotate 6s linear infinite; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>@keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Glass Box Style */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.glass-box { background: rgba(255, 255, 255, 0.55); backdrop-filter: blur(10px); border-radius: 25px; border: 1px solid rgba(255,255,255,0.4); }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Paper Note Style */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.paper-note {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #fff; padding: 25px; border-radius: 5px; position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 5px 5px 15px rgba(0,0,0,0.05); border-left: 5px solid var(--primary);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.paper-note::before { content: "📌"; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); font-size: 20px; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn-mood { background: white; padding: 12px; border-radius: 12px; font-size: 11px; font-weight: 600; box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: 0.3s; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn-mood:active { transform: scale(0.9); background: var(--accent); color: white; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.custom-scrollbar::-webkit-scrollbar { width: 4px; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.custom-scrollbar::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="cover"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="text-center text-white p-10 animate__animated animate__fadeIn"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="font-serif italic text-sm mb-4 tracking-[0.2em] uppercase"&gt;COUNTING DOWN THE WEDDING DAY OF&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h1 class="text-5xl font-title mb-12 leading-tight drop-shadow-lg"&gt;Azzahra&lt;br&gt;&amp; Wijang&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="startSurprise()" class="bg-white/20 backdrop-blur-md border border-white/40 text-white px-10 py-4 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all duration-500"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Buka Lembaran Baru</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mobile-frame"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="music-container" class="music-piringan" onclick="toggleMusic()"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;img id="music-img" src="musik-foto.jpg" class="w-full h-full object-cover rotating" style="animation-play-state: paused;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;audio id="mainAudio" loop&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;source src="music-bruno.mp3" type="audio/mpeg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/audio&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="min-h-screen flex flex-col items-center justify-center p-8 text-center" data-aos="zoom-in"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="glass-box w-full py-16 px-6 shadow-xl"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="uppercase tracking-[0.5em] text-[9px] mb-8 text-[#9B6B43] font-bold"&gt;Menuju Tak Terbatas&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="timer" class="flex justify-center gap-5 text-[#7A5A3D]"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="flex flex-col"&gt;&lt;span id="days" class="text-4xl font-light"&gt;00&lt;/span&gt;&lt;span class="text-[8px] uppercase mt-2"&gt;Days&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="flex flex-col"&gt;&lt;span id="hours" class="text-4xl font-light"&gt;00&lt;/span&gt;&lt;span class="text-[8px] uppercase mt-2"&gt;Hours&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="flex flex-col"&gt;&lt;span id="minutes" class="text-4xl font-light"&gt;00&lt;/span&gt;&lt;span class="text-[8px] uppercase mt-2"&gt;Mins&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="flex flex-col"&gt;&lt;span id="seconds" class="text-4xl font-light"&gt;00&lt;/span&gt;&lt;span class="text-[8px] uppercase mt-2"&gt;Secs&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="mt-10 text-[10px] tracking-widest text-stone-400"&gt;APRIL 04, 2026 | 04:04 AM&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="min-h-screen flex flex-col items-center justify-center p-8 text-center" data-aos="fade-up"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="glass-box w-full py-12 px-6 shadow-xl border border-white/40"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="text-[#7A5A3D] text-xl mb-8 leading-[2.5] font-serif" dir="rtl"&gt;</p>
-<p dir="rtl" class="p1"><span class="Apple-converted-space">          </span>وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-[11px] leading-relaxed text-stone-500 italic px-4 mb-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>"And among His signs is that He created for you from yourselves mates that you may find tranquility in them; and He placed between you affection and mercy."</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="font-bold text-[#9B6B43] text-[9px] tracking-widest uppercase"&gt;— QS. Ar-Rum: 21 —&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">   </span>&lt;section class="min-h-screen flex flex-col items-center justify-center p-8 space-y-10"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="paper-note w-full" data-aos="fade-right"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h4 class="font-title text-[#7A5A3D] mb-2 text-sm uppercase tracking-widest"&gt;Be Happy!&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="text-xs leading-relaxed text-stone-600 italic"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>"I want u to be happy, bcs you deserve it.</p>
-<p class="p1">I want u to be happy, bcs seeing you smile makes me happy too.</p>
-<p class="p1">Just the way you were always meant to be."</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="paper-note w-full" data-aos="fade-left"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h4 class="font-title text-[#7A5A3D] mb-2 text-sm uppercase tracking-widest"&gt;Pondasinya Pondasi&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="text-xs leading-relaxed text-stone-600 italic"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>"Mari terus mempersiapkan diri, selalu belajar, selalu sabar dan berdoa. Yang terpenting, jaga niat tetap lurus karena Allah, mencari ridho Allah. Karena insyaallah ini akan menjadi ibadah terpanjang kita."</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;section class="min-h-screen flex flex-col items-center justify-center p-8 space-y-10"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="paper-note w-full" data-aos="fade-right"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h4 class="font-title text-[#7A5A3D] mb-2 text-sm uppercase tracking-widest"&gt;Kuserahkan Kepada Allah&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="text-xs leading-relaxed text-stone-600 italic"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>"Katanya, setiap niat baik pasti ada ujiannya. Entah seberat apa ujian yang kamu hadapi, semoga Allah selau beri petunjuk, kemudahan, kelancaran dan kebarokahan. Aamiin."</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="paper-note w-full" data-aos="fade-left"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h4 class="font-title text-[#7A5A3D] mb-2 text-sm uppercase tracking-widest"&gt;A Promise to You&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="text-xs leading-relaxed text-stone-600 italic"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>"Aku tahu persiapan ini menguras energi dan pikiranmu. Terima kasih sudah bertahan dan tetap melangkah sejauh ini. Mari saling mempermudah dan saling menguatkan, karena setelah ini kita akan menghadapi segalanya berdua. Jaga kesehatan ya, Luthfia Azzahra."</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="min-h-screen flex flex-col items-center justify-center p-8 text-center" data-aos="fade-up"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h3 class="font-title text-2xl mb-10 uppercase tracking-[0.3em] text-[#9B6B43]"&gt;Mood Booster Box&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="grid grid-cols-2 gap-4 w-full"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="playSFX('semangat.mp3')" class="btn-mood"&gt;🔊 Semangat!&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="playSFX('cihuy.mp3')" class="btn-mood"&gt;🤣 Cihuyy&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="playSFX('hey.mp3')" class="btn-mood"&gt;🎵 Sambutan Hangat&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="playSFX('hidup-jokowi.mp3')" class="btn-mood"&gt;💍 Ben Tambah Semangat&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="min-h-screen py-20 px-8" data-aos="fade-up"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="glass-box p-8 shadow-2xl border border-white/50"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3 class="font-title text-xl text-center mb-2 uppercase tracking-widest text-[#9B6B43]"&gt;How Do You Feel?&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-[10px] text-center text-stone-400 mb-8 italic"&gt;Tell me everything that's on your mind today...&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;form id="msgForm" class="space-y-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;input type="text" id="nama" placeholder="Your Sweet Name" class="w-full p-4 rounded-xl bg-white/50 text-sm outline-none border border-white/30" required&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;textarea id="pesan" placeholder="Describe your feelings..." class="w-full p-4 h-32 rounded-xl bg-white/50 text-sm outline-none resize-none border border-white/30" required&gt;&lt;/textarea&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;button type="submit" class="w-full bg-[#9B6B43] text-white py-4 rounded-xl text-[10px] font-bold uppercase tracking-widest shadow-lg active:scale-95 transition-all"&gt;Send to My Heart&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/form&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="liveMessages" class="mt-10 space-y-4 max-h-[300px] overflow-y-auto custom-scrollbar pr-2"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer class="py-24 text-center px-10" data-aos="zoom-in"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="font-serif italic text-stone-400 text-xs mb-4 leading-relaxed px-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>"The countdown is just a number, but my devotion to you is infinite. Our greatest adventure is only beginning. Stay healthy and happy, Azzahra."</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="h-[1px] w-12 bg-[#9B6B43]/30 mx-auto mb-8"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="font-title text-lg text-[#7A5A3D] tracking-wide"&gt;Bismillah, Let's make this beautiful journey happen.&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="text-[9px] tracking-[0.5em] mt-10 opacity-40 uppercase"&gt;Little &amp;nbsp; Surprise<span class="Apple-converted-space">  </span>&amp;nbsp; from &amp;nbsp; your future, Wijang Asa&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script src="https://unpkg.com/aos@2.3.1/dist/aos.js"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>AOS.init({ duration: 1200, once: false });</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>const mainAudio = document.getElementById("mainAudio");</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const musicImg = document.getElementById("music-img");</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>function startSurprise() {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('cover').style.transform = 'translateY(-100%)';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>document.body.style.overflow = 'auto';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>mainAudio.volume = 0.3;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>mainAudio.play();</p>
-<p class="p1"><span class="Apple-converted-space">      </span>musicImg.style.animationPlayState = 'running';</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>function toggleMusic() {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>if (mainAudio.paused) {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>mainAudio.play();</p>
-<p class="p1"><span class="Apple-converted-space">        </span>musicImg.style.animationPlayState = 'running';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>mainAudio.pause();</p>
-<p class="p1"><span class="Apple-converted-space">        </span>musicImg.style.animationPlayState = 'paused';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>function playSFX(file) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const sfx = new Audio(file);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>sfx.volume = 0.5;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>sfx.play();</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>// Countdown 4 April 2026 04:04 AM</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const target = new Date("April 4, 2026 04:04:00").getTime();</p>
-<p class="p1"><span class="Apple-converted-space">    </span>setInterval(() =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const now = new Date().getTime();</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const diff = target - now;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>if (diff &lt; 0) return;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');</p>
-<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("hours").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');</p>
-<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("minutes").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');</p>
-<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("seconds").innerText = Math.floor((diff % (1000 * 60)) / 1000).toString().padStart(2, '0');</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}, 1000);</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>// Live Message Handle</p>
-<p class="p1"><span class="Apple-converted-space">    </span>// GANTI SELURUH BAGIAN SCRIPT FORM DI DALAM HTML MAS DENGAN INI:</p>
-<p class="p2"><br></p>
-<p class="p1">const rsvpForm = document.getElementById('msgForm');</p>
-<p class="p1">const commentContainer = document.getElementById('liveMessages');</p>
-<p class="p2"><br></p>
-<p class="p1">rsvpForm.addEventListener('submit', function(e) {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>e.preventDefault();</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>const nama = document.getElementById('nama').value;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const pesan = document.getElementById('pesan').value;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const inisial = nama.charAt(0).toUpperCase();</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>// 1. EFEK VISUAL: TAMPILKAN DI WEB DIA (Agar dia senang)</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const newComment = document.createElement('div');</p>
-<p class="p1"><span class="Apple-converted-space">  </span>newComment.className = "paper-note w-full animate__animated animate__fadeInUp mb-4 shadow-sm";</p>
-<p class="p1"><span class="Apple-converted-space">  </span>newComment.innerHTML = `</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="flex items-center gap-3 mb-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="w-8 h-8 bg-[#9B6B43] rounded-full flex items-center justify-center text-[10px] font-bold text-white shadow-sm"&gt;${inisial}&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="font-bold text-[10px] text-[#7A5A3D] uppercase tracking-wider"&gt;${nama}&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="text-[11px] text-stone-500 italic leading-relaxed"&gt;"${pesan}"&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>`;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>commentContainer.prepend(newComment);</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>// 2. EFEK RAHASIA: KIRIM KE EMAIL MAS (SILENT SEND)</p>
-<p class="p1"><span class="Apple-converted-space">  </span>// Ganti 'LINK_FORMSPREE_ANDA' dengan link dari formspree.io</p>
-<p class="p1"><span class="Apple-converted-space">  </span>fetch("https://formspree.io/f/mlgpgwov", {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>method: "POST",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body: new FormData(rsvpForm),</p>
-<p class="p1"><span class="Apple-converted-space">    </span>headers: { 'Accept': 'application/json' }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}).then(response =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>if (response.ok) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>// Munculkan notifikasi kecil yang romantis</p>
-<p class="p1"><span class="Apple-converted-space">      </span>alert("Thank you, Azzahra. Your message has been safely kept in my heart.");</p>
-<p class="p1"><span class="Apple-converted-space">      </span>rsvpForm.reset();</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}).catch(error =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>// Jika internet gangguan, tetap muncul alert sukses agar dia tidak bingung</p>
-<p class="p1"><span class="Apple-converted-space">    </span>alert("Message pending, check your internet, babe.");</p>
-<p class="p1"><span class="Apple-converted-space">    </span>rsvpForm.reset();</p>
-<p class="p1"><span class="Apple-converted-space">  </span>});</p>
-<p class="p1">});</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+<body class="overflow-hidden">
+
+  <div id="cover">
+    <div class="text-center text-white p-10 animate__animated animate__fadeIn">
+      <p class="font-serif italic text-sm mb-4 tracking-[0.2em] uppercase">COUNTING DOWN THE WEDDING DAY OF</p>
+      <h1 class="text-5xl font-title mb-12 leading-tight drop-shadow-lg">Azzahra<br>& Wijang</h1>
+      <button onclick="startSurprise()" class="bg-white/20 backdrop-blur-md border border-white/40 text-white px-10 py-4 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all duration-500">
+        Buka Lembaran Baru
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-frame">
+    <div id="music-container" class="music-piringan" onclick="toggleMusic()">
+      <img id="music-img" src="musik-foto.jpg" class="w-full h-full object-cover rotating" style="animation-play-state: paused;">
+      <audio id="mainAudio" loop>
+        <source src="music-bruno.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <section class="min-h-screen flex flex-col items-center justify-center p-8 text-center" data-aos="zoom-in">
+      <div class="glass-box w-full py-16 px-6 shadow-xl">
+        <p class="uppercase tracking-[0.5em] text-[9px] mb-8 text-[#9B6B43] font-bold">Menuju Tak Terbatas</p>
+        <div id="timer" class="flex justify-center gap-5 text-[#7A5A3D]">
+          <div class="flex flex-col"><span id="days" class="text-4xl font-light">00</span><span class="text-[8px] uppercase mt-2">Days</span></div>
+          <div class="flex flex-col"><span id="hours" class="text-4xl font-light">00</span><span class="text-[8px] uppercase mt-2">Hours</span></div>
+          <div class="flex flex-col"><span id="minutes" class="text-4xl font-light">00</span><span class="text-[8px] uppercase mt-2">Mins</span></div>
+          <div class="flex flex-col"><span id="seconds" class="text-4xl font-light">00</span><span class="text-[8px] uppercase mt-2">Secs</span></div>
+        </div>
+        <p class="mt-10 text-[10px] tracking-widest text-stone-400">APRIL 04, 2026 | 04:04 AM</p>
+      </div>
+    </section>
+
+    <section class="min-h-screen flex flex-col items-center justify-center p-8 text-center" data-aos="fade-up">
+      <div class="glass-box w-full py-12 px-6 shadow-xl border border-white/40">
+        <div class="text-[#7A5A3D] text-xl mb-8 leading-[2.5] font-serif" dir="rtl">
+          وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً
+        </div>
+        <p class="text-[11px] leading-relaxed text-stone-500 italic px-4 mb-4">
+          "And among His signs is that He created for you from yourselves mates that you may find tranquility in them; and He placed between you affection and mercy."
+        </p>
+        <p class="font-bold text-[#9B6B43] text-[9px] tracking-widest uppercase">— QS. Ar-Rum: 21 —</p>
+      </div>
+    </section>
+
+    <section class="min-h-screen flex flex-col items-center justify-center p-8 space-y-10">
+      <div class="paper-note w-full" data-aos="fade-right">
+        <h4 class="font-title text-[#7A5A3D] mb-2 text-sm uppercase tracking-widest">Be Happy!</h4>
+        <p class="text-xs leading-relaxed text-stone-600 italic">
+          "I want you to be happy, because you deserve it. Seeing you smile makes me happy too."
+        </p>
+      </div>
+      <div class="paper-note w-full" data-aos="fade-left">
+        <h4 class="font-title text-[#7A5A3D] mb-2 text-sm uppercase tracking-widest">Pondasinya Pondasi</h4>
+        <p class="text-xs leading-relaxed text-stone-600 italic">
+          "Jaga niat tetap lurus karena Allah. Insyaallah ini akan menjadi ibadah terpanjang kita."
+        </p>
+      </div>
+    </section>
+
+    <section class="min-h-screen flex flex-col items-center justify-center p-8 text-center" data-aos="fade-up">
+      <h3 class="font-title text-2xl mb-10 uppercase tracking-[0.3em] text-[#9B6B43]">Mood Booster Box</h3>
+      <div class="grid grid-cols-2 gap-4 w-full">
+        <button onclick="playSFX('semangat.mp3')" class="btn-mood">🔊 Semangat!</button>
+        <button onclick="playSFX('cihuy.mp3')" class="btn-mood">🤣 Cihuyy</button>
+        <button onclick="playSFX('hey.mp3')" class="btn-mood">🎵 Hey!</button>
+        <button onclick="playSFX('hidup-jokowi.mp3')" class="btn-mood">💍 Ijab Latihan</button>
+      </div>
+    </section>
+
+    <section class="min-h-screen py-20 px-8" data-aos="fade-up">
+      <div class="glass-box p-8 shadow-2xl">
+        <h3 class="font-title text-xl text-center mb-2 uppercase tracking-widest text-[#9B6B43]">How Do You Feel?</h3>
+        <form id="msgForm" class="space-y-4">
+          <input type="text" id="nama" name="name" placeholder="Your Sweet Name" class="w-full p-4 rounded-xl bg-white/50 text-sm outline-none border border-white/30" required>
+          <textarea id="pesan" name="message" placeholder="Describe your feelings..." class="w-full p-4 h-32 rounded-xl bg-white/50 text-sm outline-none resize-none border border-white/30" required></textarea>
+          <button type="submit" class="w-full bg-[#9B6B43] text-white py-4 rounded-xl text-[10px] font-bold uppercase tracking-widest">Send to My Heart</button>
+        </form>
+        <div id="liveMessages" class="mt-10 space-y-4 max-h-[300px] overflow-y-auto custom-scrollbar"></div>
+      </div>
+    </section>
+
+    <footer class="py-24 text-center px-10" data-aos="zoom-in">
+      <div class="h-[1px] w-12 bg-[#9B6B43]/30 mx-auto mb-8"></div>
+      <h2 class="font-title text-lg text-[#7A5A3D]">Bismillah, Let's make this beautiful journey happen.</h2>
+      <p class="text-[9px] tracking-[0.5em] mt-10 opacity-40 uppercase">Little Surprise from Wijang Asa</p>
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1200, once: false });
+    
+    const mainAudio = document.getElementById("mainAudio");
+    const musicImg = document.getElementById("music-img");
+
+    function startSurprise() {
+      document.getElementById('cover').style.transform = 'translateY(-100%)';
+      document.body.classList.remove('overflow-hidden');
+      mainAudio.volume = 0.3;
+      mainAudio.play();
+      musicImg.style.animationPlayState = 'running';
+    }
+
+    function toggleMusic() {
+      if (mainAudio.paused) {
+        mainAudio.play();
+        musicImg.style.animationPlayState = 'running';
+      } else {
+        mainAudio.pause();
+        musicImg.style.animationPlayState = 'paused';
+      }
+    }
+
+    function playSFX(file) {
+      const sfx = new Audio(file);
+      sfx.play();
+    }
+
+    // Countdown logic
+    const target = new Date("April 4, 2026 04:04:00").getTime();
+    setInterval(() => {
+      const now = new Date().getTime();
+      const diff = target - now;
+      if (diff < 0) return;
+      document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+      document.getElementById("hours").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+      document.getElementById("minutes").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+      document.getElementById("seconds").innerText = Math.floor((diff % (1000 * 60)) / 1000).toString().padStart(2, '0');
+    }, 1000);
+
+    // Form Handle
+    const rsvpForm = document.getElementById('msgForm');
+    rsvpForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nama = document.getElementById('nama').value;
+      const pesan = document.getElementById('pesan').value;
+
+      const newComment = document.createElement('div');
+      newComment.className = "paper-note w-full animate__animated animate__fadeInUp mb-4 shadow-sm";
+      newComment.innerHTML = `<p class="font-bold text-[10px] text-[#9B6B43] mb-1 uppercase">${nama}</p><p class="text-xs italic text-stone-600">"${pesan}"</p>`;
+      document.getElementById('liveMessages').prepend(newComment);
+
+      fetch("https://formspree.io/f/mlgpgwov", {
+        method: "POST",
+        body: new FormData(rsvpForm),
+        headers: { 'Accept': 'application/json' }
+      }).then(() => {
+        alert("Thank you, Azzahra. Safe in my heart.");
+        rsvpForm.reset();
+      });
+    });
+  </script>
 </body>
 </html>
