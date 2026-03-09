@@ -2,14 +2,13 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>AW ME(H)NIKAH</title>
 
   <meta name="title" content="A Special Surprise for Azzahra 💍">
-  <meta name="description" content="A little surprise from your future, Wijang Asa. Please open this when you're ready.">
+  <meta name="description" content="A little surprise from your future, Wijang Asa.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="AW ME(H)NIKAH 💍">
-  <meta property="og:description" content="A little surprise from your future, Wijang Asa.">
   <meta property="og:image" content="https://raw.githubusercontent.com/bywijang/bentambahsemangattt/main/cover.png">
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,34 +18,66 @@
 
   <style>
     :root { --primary: #9B6B43; --accent: #b69ca3; --bg: #F4F1EA; }
-    body { font-family: 'Quicksand', sans-serif; background-color: #1a1a1a; color: #4A4238; overflow-x: hidden; scroll-behavior: smooth; }
+    
+    /* 1. Kunci Body agar tidak ada celah putih dan pas di layar HP */
+    body { 
+      font-family: 'Quicksand', sans-serif; 
+      background-color: #1a1a1a; 
+      margin: 0; 
+      padding: 0;
+      overflow-x: hidden;
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
+    }
+
+    /* 2. LAYER BACKGROUND STATIS (Kunci BG agar tidak geser) */
+    .bg-fixed-layer {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 450px; /* Lebar Frame HP */
+      height: 100%;
+      background-image: url('./bg.jpg'); 
+      background-size: cover;
+      background-position: center;
+      z-index: -1; /* Di belakang konten */
+    }
+
+    /* Efek Blur & Gelap (Adjustment Layer) */
+    .bg-fixed-layer::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5); 
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+
+    /* 3. FRAME KONTEN (Transparan agar BG terlihat) */
+    .mobile-frame {
+      max-width: 450px;
+      margin: 0 auto;
+      position: relative;
+      background: transparent; 
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
+      box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    }
+
     .font-title { font-family: 'Marcellus', serif; }
     .font-serif { font-family: 'Alice', serif; }
 
-    /* Background Utama - TETAP .JPG */
-    .mobile-frame {
-      max-width: 450px; margin: 0 auto; position: relative; min-height: 100vh;
-      background-image: url('bg.jpg'); background-size: cover; background-position: center;
-      background-attachment: fixed; background-color: var(--bg);
-    }
-
-    .mobile-frame::before {
-      content: ""; position: absolute; inset: 0;
-      background-color: rgba(0, 0, 0, 0.5); 
-      backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
-      z-index: 1;
-    }
-
-    .mobile-frame > * { position: relative; z-index: 2; }
-
-    /* Cover Section - SUDAH JADI .PNG */
+    /* Cover Section Fullscreen */
     #cover {
       position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center;
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('cover.png');
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./cover.png');
       background-size: cover; background-position: center;
       transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
     }
 
+    /* Piringan Musik */
     .music-piringan {
       position: fixed; bottom: 25px; right: 20px; z-index: 999;
       width: 55px; height: 55px; border-radius: 50%; border: 2px solid white;
@@ -56,13 +87,19 @@
     .rotating { animation: rotate 6s linear infinite; }
     @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
+    /* Glass Box & Notes */
     .glass-box { background: rgba(255, 255, 255, 0.55); backdrop-filter: blur(10px); border-radius: 25px; border: 1px solid rgba(255,255,255,0.4); }
     .paper-note { background: #fff; padding: 25px; border-radius: 5px; position: relative; box-shadow: 5px 5px 15px rgba(0,0,0,0.05); border-left: 5px solid var(--primary); }
     .paper-note::before { content: "📌"; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); font-size: 20px; }
     .btn-mood { background: white; padding: 12px; border-radius: 12px; font-size: 11px; font-weight: 600; box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: 0.3s; }
+
+    .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
   </style>
 </head>
 <body class="overflow-hidden">
+
+  <div class="bg-fixed-layer"></div>
 
   <div id="cover">
     <div class="text-center text-white p-10 animate__animated animate__fadeIn">
@@ -76,8 +113,8 @@
 
   <div class="mobile-frame">
     <div id="music-container" class="music-piringan" onclick="toggleMusic()">
-      <img id="music-img" src="musik-foto.png" class="w-full h-full object-cover rotating" style="animation-play-state: paused;">
-      <audio id="mainAudio" loop><source src="music-bruno.mp3" type="audio/mpeg"></audio>
+      <img id="music-img" src="./musik-foto.png" class="w-full h-full object-cover rotating" style="animation-play-state: paused;">
+      <audio id="mainAudio" loop><source src="./music-bruno.mp3" type="audio/mpeg"></audio>
     </div>
 
     <section class="min-h-screen flex flex-col items-center justify-center p-8 text-center" data-aos="zoom-in">
@@ -95,12 +132,8 @@
 
     <section class="min-h-screen flex flex-col items-center justify-center p-8 text-center" data-aos="fade-up">
       <div class="glass-box w-full py-12 px-6 shadow-xl border border-white/40">
-        <div class="text-[#7A5A3D] text-xl mb-8 leading-[2.5] font-serif" dir="rtl">
-          وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً
-        </div>
-        <p class="text-[11px] leading-relaxed text-stone-500 italic px-4 mb-4">
-          "And among His signs is that He created for you from yourselves mates that you may find tranquility in them; and He placed between you affection and mercy."
-        </p>
+        <div class="text-[#7A5A3D] text-xl mb-8 leading-[2.5] font-serif" dir="rtl">وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً</div>
+        <p class="text-[11px] leading-relaxed text-stone-500 italic px-4 mb-4">"And among His signs is that He created for you from yourselves mates that you may find tranquility in them..."</p>
         <p class="font-bold text-[#9B6B43] text-[9px] tracking-widest uppercase">— QS. Ar-Rum: 21 —</p>
       </div>
     </section>
@@ -108,40 +141,32 @@
     <section class="min-h-screen flex flex-col items-center justify-center p-8 space-y-10">
       <div class="paper-note w-full" data-aos="fade-right">
         <h4 class="font-title text-[#7A5A3D] mb-2 text-sm uppercase tracking-widest">Be Happy!</h4>
-        <p class="text-xs leading-relaxed text-stone-600 italic">
-          "I want you to be happy, because you deserve it. Seeing you smile makes me happy too. Just the way you were always meant to be."
-        </p>
+        <p class="text-xs leading-relaxed text-stone-600 italic">"I want you to be happy, because you deserve it. Seeing you smile makes me happy too."</p>
       </div>
       <div class="paper-note w-full" data-aos="fade-left">
         <h4 class="font-title text-[#7A5A3D] mb-2 text-sm uppercase tracking-widest">Pondasinya Pondasi</h4>
-        <p class="text-xs leading-relaxed text-stone-600 italic">
-          "Mari terus mempersiapkan diri, selalu belajar, selalu sabar dan berdoa. Jaga niat tetap lurus karena Allah. Insyaallah ini akan menjadi ibadah terpanjang kita."
-        </p>
+        <p class="text-xs leading-relaxed text-stone-600 italic">"Mari terus mempersiapkan diri, selalu belajar, selalu sabar dan berdoa."</p>
       </div>
     </section>
 
     <section class="min-h-screen flex flex-col items-center justify-center p-8 space-y-10">
       <div class="paper-note w-full" data-aos="fade-right">
         <h4 class="font-title text-[#7A5A3D] mb-2 text-sm uppercase tracking-widest">Kuserahkan Kepada Allah</h4>
-        <p class="text-xs leading-relaxed text-stone-600 italic">
-          "Katanya, setiap niat baik pasti ada ujiannya. Entah seberat apa ujian yang kamu hadapi, semoga Allah selalu beri petunjuk, kemudahan, kelancaran dan kebarokahan. Aamiin."
-        </p>
+        <p class="text-xs leading-relaxed text-stone-600 italic">"Katanya, setiap niat baik pasti ada ujiannya. Semoga Allah beri kemudahan."</p>
       </div>
       <div class="paper-note w-full" data-aos="fade-left">
         <h4 class="font-title text-[#7A5A3D] mb-2 text-sm uppercase tracking-widest">A Promise to You</h4>
-        <p class="text-xs leading-relaxed text-stone-600 italic">
-          "Aku tahu persiapan ini menguras energi dan pikiranmu. Terima kasih sudah bertahan dan tetap melangkah sejauh ini. Jaga kesehatan ya, Luthfia Azzahra."
-        </p>
+        <p class="text-xs leading-relaxed text-stone-600 italic">"Aku tahu persiapan ini menguras energi dan pikiranmu. Jaga kesehatan ya, Luthfia Azzahra."</p>
       </div>
     </section>
 
     <section class="min-h-screen flex flex-col items-center justify-center p-8 text-center" data-aos="fade-up">
       <h3 class="font-title text-xl mb-10 uppercase tracking-[0.3em] text-[#9B6B43]">Mood Booster Box</h3>
       <div class="grid grid-cols-2 gap-4 w-full">
-        <button onclick="playSFX('semangat.mp3')" class="btn-mood">🔊 Semangat!</button>
-        <button onclick="playSFX('cihuy.mp3')" class="btn-mood">🤣 Cihuyy</button>
-        <button onclick="playSFX('hey.mp3')" class="btn-mood">🎵 Hey! Kamu</button>
-        <button onclick="playSFX('hidup-jokowi.mp3')" class="btn-mood">💍 Yok bisa yok!</button>
+        <button onclick="playSFX('./semangat.mp3')" class="btn-mood">🔊 Semangat!</button>
+        <button onclick="playSFX('./cihuy.mp3')" class="btn-mood">🤣 Cihuyy</button>
+        <button onclick="playSFX('./hey.mp3')" class="btn-mood">🎵 Hey! Kamu</button>
+        <button onclick="playSFX('./hidup-jokowi.mp3')" class="btn-mood">💍 Yok bisa yok!</button>
       </div>
     </section>
 
@@ -151,16 +176,14 @@
         <form id="msgForm" class="space-y-4">
           <input type="text" id="nama" name="name" placeholder="Your Sweet Name" class="w-full p-4 rounded-xl bg-white/50 text-sm outline-none border border-white/30" required>
           <textarea id="pesan" name="message" placeholder="Describe your feelings..." class="w-full p-4 h-32 rounded-xl bg-white/50 text-sm outline-none resize-none border border-white/30" required></textarea>
-          <button type="submit" class="w-full bg-[#9B6B43] text-white py-4 rounded-xl text-[10px] font-bold uppercase tracking-widest shadow-lg active:scale-95 transition-all">Send to My Heart</button>
+          <button type="submit" class="w-full bg-[#9B6B43] text-white py-4 rounded-xl text-[10px] font-bold uppercase tracking-widest">Send to My Heart</button>
         </form>
         <div id="liveMessages" class="mt-10 space-y-4 max-h-[300px] overflow-y-auto custom-scrollbar"></div>
       </div>
     </section>
 
     <footer class="py-24 text-center px-10" data-aos="zoom-in">
-      <p class="font-serif italic text-stone-400 text-xs mb-4 leading-relaxed px-4">
-        "The countdown is just a number, but my devotion to you is infinite. Our greatest adventure is only beginning. Stay healthy and happy, Azzahra."
-      </p>
+      <p class="font-serif italic text-stone-400 text-xs mb-4 leading-relaxed px-4">"The countdown is just a number, but my devotion to you is infinite."</p>
       <div class="h-[1px] w-12 bg-[#9B6B43]/30 mx-auto mb-8"></div>
       <h2 class="font-title text-lg text-[#7A5A3D]">Bismillah, Let's make this beautiful journey happen.</h2>
       <p class="text-[9px] tracking-[0.5em] mt-10 opacity-40 uppercase">A Little Surprise from Your Future, Wijang Asa</p>
@@ -170,7 +193,6 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1200, once: false });
-    
     const mainAudio = document.getElementById("mainAudio");
     const musicImg = document.getElementById("music-img");
     let currentSFX = null;
@@ -184,20 +206,12 @@
     }
 
     function toggleMusic() {
-      if (mainAudio.paused) {
-        mainAudio.play();
-        musicImg.style.animationPlayState = 'running';
-      } else {
-        mainAudio.pause();
-        musicImg.style.animationPlayState = 'paused';
-      }
+      if (mainAudio.paused) { mainAudio.play(); musicImg.style.animationPlayState = 'running'; }
+      else { mainAudio.pause(); musicImg.style.animationPlayState = 'paused'; }
     }
 
     function playSFX(file) {
-      if (currentSFX) {
-        currentSFX.pause();
-        currentSFX.currentTime = 0;
-      }
+      if (currentSFX) { currentSFX.pause(); currentSFX.currentTime = 0; }
       currentSFX = new Audio(file);
       currentSFX.play();
     }
@@ -222,15 +236,8 @@
       card.className = "paper-note w-full animate__animated animate__fadeInUp mb-4";
       card.innerHTML = `<p class="font-bold text-[10px] text-[#9B6B43] uppercase tracking-widest">${nama}</p><p class="text-xs italic text-stone-600">"${pesan}"</p>`;
       document.getElementById('liveMessages').prepend(card);
-
-      fetch("https://formspree.io/f/mlgpgwov", {
-        method: "POST",
-        body: new FormData(rsvpForm),
-        headers: { 'Accept': 'application/json' }
-      }).then(() => {
-        alert("Your heart has been heard. Thank you, Azzahra.");
-        rsvpForm.reset();
-      });
+      fetch("https://formspree.io/f/mlgpgwov", { method: "POST", body: new FormData(rsvpForm), headers: { 'Accept': 'application/json' } })
+      .then(() => { alert("Your heart has been heard. Thank you, Azzahra."); rsvpForm.reset(); });
     });
   </script>
 </body>
