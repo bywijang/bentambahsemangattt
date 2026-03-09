@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="AW ME(H)NIKAH 💍">
   <meta property="og:description" content="A little surprise from your future, Wijang Asa.">
-  <meta property="og:image" content="https://github.com/bywijang/bentambahsemangattt/blob/main/cover.png?raw=true">
+  <meta property="og:image" content="https://raw.githubusercontent.com/bywijang/bentambahsemangattt/main/cover.png">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -23,24 +23,23 @@
     .font-title { font-family: 'Marcellus', serif; }
     .font-serif { font-family: 'Alice', serif; }
 
-    /* Fix Background Agar Tetap Diam Saat Di-scroll */
+    /* Background Utama - TETAP .JPG */
     .mobile-frame {
       max-width: 450px; margin: 0 auto; position: relative; min-height: 100vh;
       background-image: url('bg.jpg'); background-size: cover; background-position: center;
       background-attachment: fixed; background-color: var(--bg);
     }
 
-    /* Filter Blur & Gelap (Adjustment Layer) */
     .mobile-frame::before {
       content: ""; position: absolute; inset: 0;
-      background-color: rgba(0, 0, 0, 0.5); /* Gelapkan */
-      backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); /* Blur */
+      background-color: rgba(0, 0, 0, 0.5); 
+      backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
       z-index: 1;
     }
 
     .mobile-frame > * { position: relative; z-index: 2; }
 
-    /* Cover Section Fullscreen */
+    /* Cover Section - SUDAH JADI .PNG */
     #cover {
       position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center;
       background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('cover.png');
@@ -48,7 +47,6 @@
       transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
     }
 
-    /* Piringan Musik */
     .music-piringan {
       position: fixed; bottom: 25px; right: 20px; z-index: 999;
       width: 55px; height: 55px; border-radius: 50%; border: 2px solid white;
@@ -58,7 +56,6 @@
     .rotating { animation: rotate 6s linear infinite; }
     @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
-    /* UI Components */
     .glass-box { background: rgba(255, 255, 255, 0.55); backdrop-filter: blur(10px); border-radius: 25px; border: 1px solid rgba(255,255,255,0.4); }
     .paper-note { background: #fff; padding: 25px; border-radius: 5px; position: relative; box-shadow: 5px 5px 15px rgba(0,0,0,0.05); border-left: 5px solid var(--primary); }
     .paper-note::before { content: "📌"; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); font-size: 20px; }
@@ -154,7 +151,7 @@
         <form id="msgForm" class="space-y-4">
           <input type="text" id="nama" name="name" placeholder="Your Sweet Name" class="w-full p-4 rounded-xl bg-white/50 text-sm outline-none border border-white/30" required>
           <textarea id="pesan" name="message" placeholder="Describe your feelings..." class="w-full p-4 h-32 rounded-xl bg-white/50 text-sm outline-none resize-none border border-white/30" required></textarea>
-          <button type="submit" class="w-full bg-[#9B6B43] text-white py-4 rounded-xl text-[10px] font-bold uppercase tracking-widest">Send to My Heart</button>
+          <button type="submit" class="w-full bg-[#9B6B43] text-white py-4 rounded-xl text-[10px] font-bold uppercase tracking-widest shadow-lg active:scale-95 transition-all">Send to My Heart</button>
         </form>
         <div id="liveMessages" class="mt-10 space-y-4 max-h-[300px] overflow-y-auto custom-scrollbar"></div>
       </div>
@@ -176,7 +173,7 @@
     
     const mainAudio = document.getElementById("mainAudio");
     const musicImg = document.getElementById("music-img");
-    let currentSFX = null; // 7. Variabel Penampung SFX
+    let currentSFX = null;
 
     function startSurprise() {
       document.getElementById('cover').style.transform = 'translateY(-100%)';
@@ -196,7 +193,6 @@
       }
     }
 
-    // 7. SFX Auto-Stop Logic
     function playSFX(file) {
       if (currentSFX) {
         currentSFX.pause();
